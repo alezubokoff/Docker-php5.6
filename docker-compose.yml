@@ -5,3 +5,10 @@ php5.6:
   - "443:443"
  volumes:
   - ./www:/var/www/html
+  db:
+  image: mysql:5.7
+  volumes:
+   - /var/lib/mysql
+  environment:
+   - MYSQL_ROOT_PASSWORD=docker
+   - MYSQL_DATABASE=phprs
